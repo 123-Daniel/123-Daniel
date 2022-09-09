@@ -1,0 +1,25 @@
+CLOUD COMPUTING
+Cloud computing deals with the ready demand delivery of IT service with pay as you go model. Cloud provides virtual IT service such as storage, compute power that are less cost then running your own Data center with all the management. Some leading cloud service provides are AWS, Microsoft Azure,Google Cloud and more . In cloud computing we have infrastructure as  service (IaaS) , Platform as Service (PaaS) and Software as Service (SaaS) that provides the underlying path to which users, developers and IT administrators use in delivering a service.
+
+TRADITIONAL ARCHITECTURE.
+
+A traditional architecture houses your physical devices and it's resource which your data center , servers and all devices that helps run your IT services.
+ISSUES WITH TRADITIONAL ARCHITECTURE 
+1. You are required to incur the cost for the rental services for the data center including it's power supply and cooling maintenance.
+2.In traditional architecture replacement of hardware takes time because your need an expert to take control in order to get the required devices and also scaling become difficult.
+
+BENEFIT OF CLOUD COMPUTING
+
+1. They provide less cost
+2. They provide agility and time value of provisioning services within a minute to customers. 
+3. Scale more easily and cost effective thus scaling at any up or down to meet business needs instantly
+4. More flexible
+5.High Available
+6.High Security
+7.Quick recovery
+8. Fault tolerance
+ 
+CLOUD DEVELOPMENT
+1.Public cloud . Eg. AWS, Azure
+2. Private cloud owned by private companies.Eg. IBM
+3. Hybrid cloud mix of private and public cloud.
