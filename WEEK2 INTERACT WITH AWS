@@ -1,0 +1,66 @@
+-AWS Console
+-AWS CLI
+-AWS SDK
+You need to create an AWS account first to manage resources in it. When you create an account for the first time your account includes 12 months of Free Tier Access.
+
+Once the account is created and this account becomes the root user. It's always best practice not to use your root account for daily tasks. You should create a user or group and enable access to the required services to that user.
+Let’s create a group called developers and create a user called developers. I created a group called developers and added some policies to that group.
+
+developers group
+We have added AWSCodeCommitFullAccess, AmazonS3FullAccess, and IAMReadOnlyAccess to this group so that any user in this group have full access to AWS services AWSCodeCommit, AWS S3, and read-only access to IAM. I created a user FullStackDeveloper and added it to the group developers. You should download the Access Key ID and secret access key.
+
+User FullStackDeveloper
+AWS Console
+This is the easiest way to manage resources on AWS. You can log in with the user you created above. Let’s copy the URL for the user login from the root account like below. Copy the console sign-in link from the security credentials tab.
+
+Console sign-in link
+Let’s log out of your root account and log back in with that user.
+
+IAM user login
+Since the user has only read-only access to the IAM you can’t add a new user. If you try to add you will get the following error.
+
+No Permissions
+Let’s go to the S3 service and see all the buckets and create one. This is a very easy process. You can go ahead and play with it.
+
+S3 buckets
+-AWS CLI
+The AWS Command Line Interface (CLI) is a unified tool to manage your AWS services. With just one tool to download and configure, you can control multiple AWS services from the command line and automate them through scripts.
+We need to install AWS CLI 
+// run some commands
+aws help
+aws ec2 describe-instances
+We need to configure our AWS CLI for the user (FullStackDeveloper) we created above, for that, you should have access to the keys that you downloaded while creating the user and use the below command.
+// configure CLI
+aws configure
+// check the user
+aws iam get-user
+
+configure AWS CLI for the user
+Once you are done with the configuration, you can use any service you have access to. Let’s create an S3 bucket and list all the buckets again with the following commands.
+// create a bucket
+aws s3api create-bucket --bucket bucket-dummy-cli --region us-east-1
+// list buckets
+aws s3 ls
+
+bucket creation from CLI
+
+-AWS SDK
+AWS has tools for developing and managing applications on AWS. AWS supports these programming languages at the time of writing C++, Go, Java, JavaScript, .NET, Node.js, PHP, Python, and Ruby. Here is an example project you can clone it and run it on your machine.
+// clone the project
+git clone https://github.com/bbachi/sample-nodejs-aws.git
+// install and start
+npm install
+npm start
+Make sure you set up your security credentials at this location ~/.aws/credentials before running the project. If you configure with the command aws configure it automatically puts the credentials there.
+There are only two dependencies for this project: express and aws-sdk.
+package.json
+Here is the main file index.js which has three routes as below
+// default route
+http://localhost:3090/
+// list buckets
+http://localhost:3090/bucketsA
+// create bucket
+http://localhost:3090/bucket/my-buclet
+index.js
+
+
