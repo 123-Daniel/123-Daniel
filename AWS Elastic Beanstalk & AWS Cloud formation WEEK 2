@@ -1,0 +1,51 @@
+-AWS Elastic Beanstalk
+is an AWS managed service for web applications. Elastic beanstalk is a pre-configured EC2 server that can directly take up your application code and environment configurations and use it to automatically provision and deploy the required resources within AWS to run the web application. Unlike EC-2 which is Infrastructure as a service, Elastic beanstalk is a Platform As A service (PAAS) as it allows users to directly use a pre-configured server for their application. Of course you can deploy applications without ever having to use elastic beanstalk but that would mean having to choose the appropriate service from the vast array of services offered by  AWS, manually provisioning these AWS resources and stitching them up together to form a complete web-application. Elastic beanstalk abstracts the underlying configuration work and allows you as a user to focus on more pressing matters.
+AWS Elastic Beanstalk Features:
+Application: Elastic Beanstalk directly takes in our project code. So the Elastic Beanstalk application is named the same as your project home directory.
+Application Environments: Users may want their application to run on different environments like DEV, UAT and PROD. You can create and configure different environments to run applications on different stages.
+-Environment Health:
+Red: Application failed all health tests.
+Yellow: Application failed some of the health tests.
+Grey: Application is updating.
+Green: Application passed health check successfully.
+
+Isolated: All environments within a single application are isolated from each other (independent of each others’ running status). Needless to say, two different applications are also isolated.
+Scalability: Using Auto-Scaling within Elastic beanstalk makes the application dynamically scalable.
+Elastic Load Balancing: All the web requests to the application are not directly related to application instances. They first hit the Elastic Load Balancer (ELB), which, as the name suggests, balances the load across all the application instances.
+Language support: Elastic Beanstalk supports the applications developed with Java, .NET, PHP, Node.js, Python, Ruby, Go, and Docker on familiar servers such as Apache, Nginx, Passenger, and IIS.
+Pricing: There is no extra charge for using Elastic Beanstalk. Users are only required to pay for the services and resources provisioned by Elastic Beanstalk Service.
+Automatic Provisioning: Elastic Beanstalk takes away the burden of choosing the right services and configuring their security groups to work together. 
+Impossible to Outgrow: AWS claims that since Elastic Beanstalk uses Auto Scaling feature it can, in theory, handle any amount of internet traffic.
+
+-Some AWS Elastic Beanstalk Commands:
+create-application
+create-application-version
+create-configuration-template
+create-environment
+create-platform-version
+create-storage-location
+delete-application
+delete-application-version
+delete-configuration-template
+delete-environment-configuration
+delete-platform-version
+describe-account-attributes
+
+-What Is AWS CloudFormation
+AWS CloudFormation is an AWS service that uses template files to automate the setup of AWS resources.
+It can also be described as infrastructure automation or Infrastructure-as-Code (IaC) tool and a cloud automation solution because it can automate the setup and deployment of various Infrastructure-as-a-Service (IaaS) offerings on the AWS CloudFormation supports virtually every service that runs in AWS
+
+--Benefits of CloudFormation
+CloudFormation and other AWS-compatible IaC tools offer a range of benefits that make cloud service deployment and management faster and more efficient.
+-Deployment speed
+When you create CloudFormation templates to manage how AWS resources are configured and deployed, you can deploy multiple instances of the same resources almost instantaneously using just one template. This approach leads to much faster deployment than you could achieve if you had to manually set up each deployment by running commands on the CLI or pressing buttons in the AWS console.
+-Scaling up
+CloudFormation templates are useful because they ensure that you can scale your environment up quickly when the time comes. By keeping CloudFormation templates on hand, you will know that you can add more virtual machine instances or storage space, for example, at a moment's notice if your applications experience increased traffic and you need to scale your environment up.
+-Service integration
+A single CloudFormation template can manage the deployment of individual services or resources and multiple resources. This management ability means you can use CloudFormation to integrate different AWS cloud services.Managing multiple services through a single template makes it easy to integrate AWS services as you build out a complete cloud environment.
+-Consistency
+When you use CloudFormation templates to define and deploy AWS resources, you can apply precisely the same configuration repeatedly. In this way, CloudFormation ensures that your applications and services will be consistent and identical, no matter how many instances you create.
+-Security
+As long as you design your CloudFormation templates to be secure, you do not need to worry that an engineer who deploys resources will forget to turn on important access control, for example, or leave data exposed to unrestricted, public access.
+retrieve data from resources deployed in the current CloudFormation or from external sources in the AWS account. Ref is used extensively to reference other resources inside the template like the example below. It creates an EIP for the instance created earlier in the template.
+
