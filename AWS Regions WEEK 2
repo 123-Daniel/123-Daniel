@@ -1,0 +1,71 @@
+-What are AWS Regions
+AWS Regions are separate geographic areas that AWS uses to house its infrastructure. These are distributed around the world so that customers can choose a region closest to them in order to host their cloud infrastructure there. The closer your region is to you, the better, so that you can reduce network latency as much as possible for your end-users. You want to be near the data centres for fast service
+What AWS Regions are currently available
+As of November 2019, there are 23 AWS Regions:
+-Region Name
+Region
+US East (Ohio)
+us-east-2
+US East (N. Virginia)
+us-east-1
+US West (N. California)
+us-west-1
+US West (Oregon)
+us-west-2
+Asia Pacific (Hong Kong)
+ap-east-1
+Asia Pacific (Mumbai)
+ap-south-1
+Asia Pacific (Osaka-Local)
+ap-northeast-3
+Asia Pacific (Seoul)
+ap-northeast-2
+Asia Pacific (Singapore)
+ap-southeast-1
+Asia Pacific (Sydney)
+ap-southeast-2
+Asia Pacific (Tokyo)
+ap-northeast-1
+Canada (Central)
+ca-central-1
+China (Beijing)
+cn-north-1
+China (Ningxia)
+cn-northwest-1
+EU (Frankfurt)
+eu-central-1
+EU (Ireland)
+eu-west-1
+EU (London)
+eu-west-2
+EU (Paris)
+eu-west-3
+EU (Stockholm)
+eu-north-1
+Middle East (Bahrain)
+me-south-1
+South America (São Paulo)
+sa-east-1
+AWS GovCloud (US-East)
+us-gov-east-1
+AWS GovCloud (US-West)
+us-gov-west-1
+
+-What AWS Regions with most services
+
+Not all regions are created equally. These regions have more services than others in their general areas:
+Americas: US East (N. Virginia), US West (N. California)
+Asia Pacific:  Singapore, Sydney, Tokyo
+EU: Frankfurt, Ireland
+
+-Choosing AWS Regions
+ 
+Proximity: Choose a region closest to your location and your customers’ location to optimise network latency.
+Services: Try and think about what are your most needed services. Usually, the newest services start in a few main regions then pop up in other regions later.
+Cost: Certain regions will cost more than others, so use built-in AWS calculators to do rough cost estimates to inform your choices.
+Service Level Agreement (SLA): Just as with cost, your SLA details will vary by region, so be sure to be aware of what your needs are and if they’re being met.
+Compliance: You may need to meet regulatory compliance needs such as GDPR by hosting your deployment in a specific — or multiple regions.
+What are AWS Availability Zones
+An AWS Availability Zone (AZ) is the logical building block that makes up an AWS Region. There are currently 69 AZs, which are isolated locations— data centres — within a region. Each region has multiple AZs and when you design your infrastructure to have backups of data in other AZs you are building a very efficient model of resiliency, i.e. a core concept of cloud computing.
+See the below image from AWS documentation for a visual representation of Availability Zones within Regions.
+
