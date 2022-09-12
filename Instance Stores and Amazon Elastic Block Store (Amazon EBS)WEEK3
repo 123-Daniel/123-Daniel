@@ -1,0 +1,29 @@
+--EBS
+Amazon Elastic Block Store (EBS) is an extremely reliable high-performance, low-latency storage service specifically designed for AWS Elastic Compute Cloud (EC2). Through EBS, you get an advanced grade cloud-based block storage system where individual EBS volumes act like unformatted block devices. These volumes are then mounted as devices on EC2 instances, eventually serving as storage volumes that are independent of the EC2 instances themselves. Amazon provides file systems over these volumes and allows you to change a volume's configuration for ease of accessibility and use.
+EBS is primarily contemplated as a valuable platform for workloads with persistent high transactions in a given amount of time, such as high workflow File Systems, DB Engines, Container Elements, Enterprise Applications, and Blockchain Workflows. With EBS, your data remains secure through Amazon's Advanced Encryption, and regularly backed-up with a Database Snapshot.
+Whether its an application supported by Database with random read-writes or an application that performs persistent read-write, EBS volumes act as the primary storage system for both types.
+Types of EBS Volumes
+Solid State Drive (SSD) EBS Volumes - These types of volumes are perfect for high volume small read-write transactions resulting in massive workloads. Such EBS Volumes are usually considered for critical applications of an organisation which requires High-Performance output. Use Cases - Enterprise Applications, RDBMS, NoSQL.
+Hard Disk Drive (HDD) EBS Volumes - These EBS volumes are recommended for applications with large sequential read-write transactions. Such EBS volumes are comparatively cheaper and are used for intermittent/infrequent access. Use Cases - Datawarehouse, Big Data Applications, Application Staging.
+What Amazon EBS Can Do For You
+High-Availability, Low-Latency Storage Volumes - EBS volumes are architectured to protect against failures with 99.999% availability. With automated EBS Snapshots, your data is backed-up with granular recovery points to achieve business continuity.
+Cost-Effective - Choose from the available pricing options suiting your application's throughput requirement. Moreover, Amazon saves EBS Snapshots as incremental volumes rather than duplicate volumes to help save costs.
+High-Scalability - With a few clicks, you can easily scale up your EBS Volumes without causing any workflow disruptions. Through Snapshots, you can quickly restore volumes, thereby enabling accelerated scale.
+Highly Secure - Amazon secures EBS volumes with a high-level of encryption for data-at-rest, data-in-transit, and all volume backups. Additionally, AWS IAM provisions access level security through efficient access and identity management on EBS volumes.
+Optimum Performance - Be it a high-throughput or a sequential-workload, AWS EBS offers perfect storage solutions for applications of all types. EBS allows you to choose from four different volume types to achieve optimal price and performance.
+--INSTANCE STORE
+An instance store provides temporary block-level storage for your instance. Instance store volumes are high-performance local disks that are physically attached to the host computer on which an EC2 instance runs. Instance stores are ideal for the temporary storage of information that changes frequently, such as buffers, caches, scratch data, and other temporary content, or for data that is replicated across a fleet of instances, such as a load-balanced pool of web servers.
+Instance stores are ephemeral which means the data is lost when powered off (non-persistent). Instance store volumes cannot be detached/reattached. Instance store volume root devices are created from AMI templates stored on S3.
+Key Points
+Boot time is slower than EBS backed volumes and usually less than 5 min.
+Can be selected as Root Volume and attached as additional volumes
+The data in an instance store persists only during the lifetime of its associated instance.
+Data on Instance store volume is LOST in the following scenarios:
+* Underlying disk drive fails
+* Instance stops
+* Instance terminates
+* Instance hibernates
+For EC2 instance store-backed instances AWS recommends to:
+* Distribute the data on the instance stores across multiple AZs
+* Back up critical data from the instance store volumes to persistent storage on a regular basis
+
