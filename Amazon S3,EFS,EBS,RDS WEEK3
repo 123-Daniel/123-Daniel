@@ -1,0 +1,70 @@
+--AMAZON S3 vs AMAZON EBS
+S3 (Simple Storage Service) and EBS (Elastic Block Store) are two file storage services provided by Amazon. The main difference between them is with what they can be used with. EBS is specifically meant for EC2 (Elastic Computing Cloud) instances and is not accessible unless mounted to one. On the other hand, S3 is not limited to EC2. The files within an S3 bucket can be retrieved using HTTP protocols and even with BitTorrent. Many sites use S3 to hold most of their files because of its accessibility to HTTP clients; web browsers for example.
+As already stated above, you need some type of software in order to read or write information with S3. With EBS, a volume can be mounted on an EC2 instance and it would appear just like a hard disk partition. It can be formatted with any file system and files can be written or read by the EC2 instance just like it would to a hard drive.
+When it comes to the total amount that you can store, S3 still has the upper hand. EBS has a standard limit of 20 volumes with each volume holding up to 1TB of data. With S3, the standard limit is at 100 buckets with each bucket having an unlimited data capacity. S3 users do not need to worry about filling a bucket and the only concern is having enough buckets for your needs.
+A limitation of EBS is its inability to be used by multiple instances at once. Once it is mounted by an instance, no other instance can use it. S3 can have multiple images of its contents so it can be used by many at the same time. An interesting side-effect of this capability is something called ‘eventual consistency’. With EBS, data read or write occurs almost instantly. With S3, the changes are not written immediately so if you write something, it may not be the data that a read operation returns.
+--SUMMARY:
+EBS can only be used with EC2 instances while S3 can be used outside EC2
+EBS appears as a mountable volume while the S3 requires software to read and write data
+EBS can accommodate a smaller amount of data than S3
+EBS can only be used by one EC2 instance at a time while S3 can be used by multiple instances
+S3 typically experiences write delays while EBS does not
+
+
+--AMAZON ElASTIC FILE SYSTEM(Amazon EFS)
+EFS is the best choice for running any application that has a high workload, requires scalable storage, and must produce output quickly. It scales automatically, even to meet the most abrupt workload spikes. After the period of high-volume storage demand has passed, EFS will automatically scale back down. EFS can be mounted to different AWS services and accessed from all your virtual machines. Use it for running shared volumes, or for big data analysis. You’ll always pay for the storage you actually use, rather than provisioning storage in advance that’s potentially wasted.
+Amazon EFS Benefits
+Performance that scales to support any workload: EFS offers the throughput changing workloads needed. It can provide higher throughput in spurts that match sudden file system growth, even for workloads up to 500,000 IOPS or 10 GB per second.
+Energetic elasticity: Automatically scale your file system storage up or down. Remove or add files and never disturb applications. Once you make your EFS file system you can add files without worrying about storage provisioning.
+Accessible file storage: On-premises servers and EC2 instances can access shared file systems concurrently. EC2 instances can also access EFS file systems located in other AWS regions through VPC peering.
+Serverless architecture support:Unlike EBS, EFS works with AWS Lambda serverless functions to easily share data from function to function.Lambda functions can read large files from EFS, such as code libraries, and write output to EFS for storage and sharing.
+Comprehensive managed service: EFS is a complete managed service, meaning your firm will never have to patch, deploy, or maintain your file system.
+Cost savings: The only storage you’ll pay for is exactly what you use, as there’s no advance provisioning, up-front fees, or commitments. Moreover, you can use Lifecycle Management to transfer files that have been unused for a month to a more cost-effective storage class, which can lower expenses up to 85 percent. However, keep in mind that EFS costs about three times as much per GB as EBS.
+Tighter security and compliance: You can securely access the file system with your current security solution, or control access to EFS file systems using AWS Identity and Access Management (IAM), Amazon Virtual Private Cloud (Amazon VPC), or POSIX permissions. And, EFS can encrypt your data, whether it’s in transit or at rest. This gives you dependable security and makes regulatory compliance easier.
+Amazon EFS Use Cases
+Lift-and-shift application support: EFS is elastic, available, and scalable. It enables you to move enterprise applications easily and quickly without needing to re-architect them.
+Analytics for big data: It has the ability to run big data applications, which demand significant node throughput, low-latency file access, and read-after-write operations.
+Content management system and web server support: EFS is a robust throughput file system capable of enabling content management systems and web serving applications, such as archives, websites, or blogs.
+Application development and testing: Only EFS provides a shared file system needed to share code and files across multiple compute resources to facilitate auto-scaling workloads.
+
+--AMAZON RDS
+Amazon Relational Database Service (RDS) is a managed SQL database service provided by Amazon Web Services (AWS). Amazon RDS supports an array of database engines to store and organise data. It also helps with relational database management tasks, such as data migration, backup, recovery and patching.
+Amazon RDS facilitates the deployment and maintenance of relational databases in the cloud. A cloud administrator uses Amazon RDS to set up, operate, manage and scale a relational instance of a cloud database. Amazon RDS is not itself a database; it is a service used to manage relational databases.
+Amazon RDS features
+
+--Amazon RDS features 
+Replication. RDS uses the Replication feature to create read replicas. These are read-only copies of database instances that applications use without altering the original production database. Administrators can also enable automatic failover across multiple availability zones through RDS Multi-AZ deployment and with synchronous data replication.
+Storage. RDS provides three types of storage:
+General-purpose solid-state drive (SSD). Amazon recommends this storage as the default choice.
+Provisioned input-output operations per second (IOPS). SSD storage for I/O-intensive workloads.
+Magnetic. A lower cost option.
+Monitoring. The Amazon CloudWatch service enables managed monitoring. It lets users view capacity and I/O metrics.
+Patching. RDS provides patches for whichever database engine the user chooses.
+Backups. Another feature is failure detection and recovery. RDS provides managed instance backups with transaction logs to enable point-in-time recovery. Users pick a retention period and restore databases to any time during that period. They also can manually take snapshots of instances that remain until they are manually deleted.
+RDS lets users specify the time and duration of the backup processes. They also can choose how long to retain backups and snapshots.
+Incremental billing. Users pay a monthly fee for the instances they launch.
+Encryption. RDS uses public key encryption to secure automated backups, read replicas, data snapshots and other data stored at rest.
+
+--Amazon RDS database instances
+A database administrator can create, configure, manage and delete an Amazon RDS instance, along with the resources it uses. An Amazon RDS instance is a cloud database environment. Admins can also spin up many databases or schemas; how many depends on the database used.
+Amazon RDS limits each customer to a total of 40 database instances per account. AWS imposes further limitations for Oracle and SQL Server instances. With those database instances, a user generally can only have up to 10.
+Amazon RDS database engines
+An AWS customer can spin up six types of database engines within Amazon RDS:
+Amazon Aurora is a proprietary AWS relational database engine. Amazon Aurora is compatible with MySQL and PostgreSQL.
+RDS for MariaDB is compatible with MariaDB, an open source relational database management system (RDBMS) that's an offshoot of MySQL.
+RDS for MySQL is compatible with the MySQL open source RDBMS.
+RDS for Oracle Database is compatible with several editions of Oracle Database, including bring-your-own-licence and licence-included versions.
+RDS for PostgreSQL is compatible with PostgreSQL open source object-RDBMS.
+RDS for SQL Server is compatible with Microsoft SQL Server, an RDBMS.
+AWS provides other database services, including the following:
+*Amazon DynamoDB key-value and document database for NoSQL databases;
+*Amazon Neptune for graph databases; and
+*AWS Database Migration Service to ease database transfers and transformations.
+
+--Amazon RDS use cases
+Online retailing. These applications manage complex databases that track inventories, transactions and pricing.
+Mobile and online gaming. RDS supports developers that need to continuously update these applications and users who need high availability.
+Travel applications. Applications like Airbnb take advantage of RDS' ability to simplify time-consuming database administration tasks and automate database replication. Mobile apps like Airbnb also take advantage of RDS' scalable storage capability.
+Streaming applications. Applications like Netflix take advantage of RDS' storage scalability as well, and availability of Amazon RDS, which allows them to handle high demand daily.
+Finance applications. These applications, like other mobile applications, can use RDS to simplify administrative database tasks and save time and money.
+
