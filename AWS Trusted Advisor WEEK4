@@ -1,0 +1,37 @@
+Trusted Advisor plays an integral part in helping you to optimise your infrastructure across a number of key areas, allowing you to make decisions upon recommendations made by the service which follow and best practices.
+The service itself can be found within the AWS Management Console under the Management & Governance category, alongside services such as Amazon CloudWatch, Control Tower and Systems Manager.  
+The main function of Trusted Advisor is to recommend improvements across your AWS account to help optimise and streamline your environment based on these AWS best practices.  These recommendations cover 5 distinct categories:
+Cost optimization - Helps to identify ways in which you could optimise your resources to help you reduce costs by implementing features such as reserved capacity and removing unused capacity
+Performance - This reviews your resources to highlight any potential performance issues across your infrastructure, determining if you could take benefits from performance-enhancing capabilities such as provisioned throughput
+Security - This analyses your environment for any potential security weaknesses or vulnerabilities that could potentially lead to a breach.
+Fault Tolerance - This helps to suggest best practices to maintain service operations by increasing resiliency, should a fault or incident occur across your resources.
+Service Limit - This identifies and warns you when your resources reach 80% capacity of their service limit quota.  
+Trusted Advisor has a list of control points and checks to see how your account, resources and architecture is implemented to determine if you’re aligned with best practice.  So it essentially acts as an automatic auditor across your account, which can save you money, increase the efficiency of your resources, maintain a tighter and more secure environment, help to ensure your resources remain operational should a failure occur and that you remain in line with your service limitations, allowing you to request an increase where possible.
+Although there are a lot of these checks that Trusted Advisor can perform, not all of them are freely available to anyone with an AWS account. The list of checks that you have access to is very dependent on the support agreement with AWS.
+The full power and potential of AWS Trusted Advisor is only available if you have a Business or Enterprise Support Plan with AWS.  Without either of these plans then you will only have access to 6 core checks in the security category and all the Service Limits 
+The 6 checks within security are as follows:
+S3 Bucket permissions
+Security Groups - Specific Ports Unrestricted
+EBS Public Snapshots
+RDS Public Snapshots
+IAM Use
+MFA on root account
+ Business and Enterprise support plans, you will see that the full checklist can provide a huge wealth of valuable information to help you optimise your infrastructure.  
+In addition to these extra checks that these support plans offer, you will also get the additional benefit of being able to administer certain functions of Trusted Advisor, such as:
+being able to track the most recent changes to your AWS account by bringing them to the top of your AWS Trusted Advisor dashboard.
+using the AWS Support API to retrieve and refresh trusted advisor results.  
+Also you’ll have the added advantage of having Amazon CloudWatch integration to detect and react to changes made to your Trusted Advisor checks
+There are also a number of features that everyone has access to, including those outside of the Enterprise and Business support plans, these being:
+Trusted Advisor Notifications - This is an opt-in or opt-out feature which is completely free to everyone and can be configured within the preferences pane of the Trusted Advisor console.  It tracks your resource check changes and cost saving estimates over the course of a week and it will then email up to 3 recipients, for billing, operations and security notifications with a report.
+Exclude Items - This allows you to select specific resources to be excluded from appearing in the console within a specific check.  You may want to do this if you are not interested in the reporting for that particular resource and so you decide to exclude it.  You can decide to include it again at any point if you do change your mind.  This feature can make viewing and managing your checks easier by eliminating some resources within the console.
+Action Links - Many of the items identified within the Checks against resources have hyperlinks associated, these are known as Action Links which allow quick access to the resource in question allowing you to remediate the issue identified.  For example, if you reached 80% of the number of VPC’s within a Region, the ‘VPC’ Service Limit Check would highlight this as an issue.  The Action Link against the resource would lead you to an AWS Support Centre page to create a case to increase the quantity of VPCs you’re allowed within a single region.
+Access Management - AWS Trusted Advisor is tightly integrated within Identity & Access Management.  You can grant different levels of access to Trusted Advisor, including Full Access, Read Only, or even restrict access down to specific Categories, Checks and Actions.  For example, the following IAM policy allows access to AWS Trusted Advisor, but denies the user from performing a refresh and updating notification preferences.
+Refresh - The data within Trusted Advisor is automatically refreshed if the data is more than 24 hours old when you view it within the console.  However, after any refresh, you can perform a manual refresh 5 minutes after the previous refresh.  You can either choose to perform a refresh against individual checks or against all checks.
+How Trusted Advisor works in a few simple steps:
+Once you connect to AWS Trusted Advisor, the service will scan your infrastructure 
+It will then compare the state of your infrastructure against best practices defined within the 5 categories of Cost Optimization, Security, Performance, Fault Tolerance and service limits
+The output of this scan will generate a number of recommendations of how your infrastructure could be optimised with a priority factor
+This then allows you to optimise your resources based on the recommendations
+AWS Trusted Advisor uses a service-linked IAM role to access your resources, named AWSTrustedAdvisorServiceRolePolicy.  This is a predefined role created by AWS and allows the services to call other services on your behalf.  The policy summary of this role is as shown here and helps to define which AWS services that Trusted Advisor communicates with.
+Please be aware that this list will change over time, so for an updated list please refer to the role within IAM to determine which services AWSTrustedAdvisorServiceRolePolicy has access to.
+
