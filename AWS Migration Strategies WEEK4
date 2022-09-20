@@ -1,0 +1,78 @@
+
+Understanding the AWS 6 R’s
+Every AWS migration strategy has its own journey and the diagram below should help you understand what are required steps.
+
+
+
+1. Retire
+After application discovery, you can also decide that you don't need these new applications in the future, so you’re just going to retire them. This is just getting rid of them as you’re not going to use them anymore.
+
+2. Retain
+You can decide to keep applications exactly as is, before a re-evaluation sometime in the future.
+
+An example of this app migration strategy:
+Unsupported OS and applications
+Legacy applications that do not have a business justification for migrating to the cloud
+
+3. Re-host
+One of the most basic ways of migrating to the AWS Cloud is simply to Re-Host something, and this is sometimes called, “Lift and Shift”. This means to take your applications or systems and move them exactly as is into the AWS Cloud environment.
+
+This approach is great for organizations that need to migrate quickly, for example, data center leases that are about to expire.
+
+For the majority of applications, this type of strategy is also the first step, because it’s easier to optimize/re-architect them once they’re already running in the AWS Cloud.
+
+Example:
+Move MySQL database to an Amazon Elastic Compute Cloud (Amazon EC2) instance on AWS.
+This type of app migration strategy was used in our case study: Times of Malta Seamlessly Migrates to AWS Cloud with StormIT
+Pros
+Speed of migration
+Reduced risk of migration
+Could be automated or assisted by tools.- AWS + third-party tools natively support this migration strategy
+Migration of whole systems (databases, VMs) with configuration
+Cons
+You may not use AWS services that give you operational advantages like managed databases, Amazon RDS, DynamoDB, Aurora, Amazon Redshift, and so on
+Potentially inherit performance issues or other problems
+
+4. Re-platform
+We also have Re-Platform which is sometimes called Lift and Reshape, because you can potentially take advantage of some of the special capabilities of the AWS cloud.
+
+An example of this app migration strategy:
+Take MySQL database, then deploy it using Amazon RDS MySQL
+Migrating your application to a fully managed platform like AWS Elastic Beanstalk
+Pros
+Option to use services that are close to existing infrastructure without requiring code change
+No dependency on OS, hypervisor or underlying physical hardware platform
+Opportunity to utilize modern OS/DB features/functionality
+In some cases, it is possible to use automated tools
+Cons
+Requires additional planning and coordination and these projects may be time-consuming and costlier
+Necessary knowledge of these “new” cloud services
+
+5. Re-architect
+This is the most advanced application migration strategy. Put simply it is a redesign of your application in a more cloud-native manner. In general, you create a serverless version of a legacy application.
+
+Example
+Migrate your on-premises Oracle database to Amazon Aurora PostgreSQL
+You can choose to modernize your monolithic application by breaking it down into smaller microservices and leverage services like Amazon Elastic Kubernetes Service, AWS Lambda, or AWS Fargate
+This type of app migration strategy was used in our case study: InScope Choses StormIT and AWS for Deployment of their AML Solution
+Pros
+Highly increased efficiency, agility and improved cost
+Eliminating dependency on custom hardware or proprietary technology platforms
+No infrastructure/servers to maintain
+Cons
+Careful evaluation of partners/vendors required
+Rearchitecting usually grows in time and effort
+Requires a very good understanding of all aspects of the application, compliance, code, design, and so on
+
+6. Re-purchase
+This involves abandoning the existing software that you have and migrating to a cloud-first application. This migration can take two forms: transferring your software license from an on-premises server to AWS (e.g. using a VM Import/Export tool), or completely replacing your current application with SaaS options. These solutions can usually be found via the AWS Marketplace or AWS Service Catalog.
+
+Example:
+Changing your web application firewall(WAF) to the one available on AWS(AWS WAF) with managed rules
+Swapping a self-run email system for an online email-as-a-service offering
+Pros
+Reduces effort/increases speed of migration
+Replace legacy systems with modern applications and SaaS
+Cons
+Difficulty with an understanding of dependencies in your current systems
+Your team needs to learn how to administer a new cloud system
