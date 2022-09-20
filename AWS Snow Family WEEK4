@@ -1,0 +1,78 @@
+AWS Snow Family moves and processes petabytes of data at the edge. The Snow family’s goal is to create low-cost devices that move data offline. To move our data to the cloud, we can rent a snow device.
+
+Snow devices are rigorously tested in the most extreme conditions. It integrates high security and ruggedization into compute and storage devices.
+
+Snow devices offer a variety of options, including optimization for space or weight constraints, portability, and flexible networking options.
+
+AWS snow family
+Key features of the Snow family 
+It offers users convenient management and monitoring.
+Applications can use snow devices as NFS (network file system) endpoints.
+With current on-premises systems and file base applications, snow devices can be used.
+All transferred data is automatically 256-bit encrypted.
+It provides a Trusted Platform Module that aids in maintaining data secrecy.
+It makes device tracking simple.
+For AWS IoT Greengrass functionality, it provides built-in computation and storage resources.
+Service models 
+AWS snow family service model is of three types: 
+
+AWS snow cone: AWS Snow cone is the most compact and portable device weighing in at 4.5 pounds (2.1kg). It is available in HDD and SDD options. Snowcone is ruggedized, secure, and purpose-built for use outside of a traditional data centre. 
+AWS snowball: AWS snowball is available as compute optimized device and storage optimized device. These devices are suited for extreme conditions, tamper-proof, and highly secure. 
+AWS snowmobile: AWS snowmobile is an Exabyte-scale data migration device which is used to move extremely large data. It migrates up to 100PB in a 45-foot-long ruggedized shipping container, pulled by a semi-trailer truck. 
+AWS Snowcone 
+AWS Snowcone is a very portable edge computing and data transport device. It is the snow family’s most portable device. Snowcone is designed for use outside of conventional data centres and is ruggedized, secure, and reliable.
+
+Data is gathered, processed, and either shipped to AWS for offline transfer or transferred using AWS Data Sync. We can deploy a portable device nearly anywhere and get the computation, storage, and network accessibility we require from it.
+
+AWS Snow Family: Snowcone
+How does it work? 
+AWS Snowcone is a portable, secure, tiny device that provides edge computing, data storage, and data transport in remote locations with limited or no connectivity.
+
+Architecture of snowcone
+Use cases 
+Accelerate fleet data collection and analysis: It has a tiny form factor, a ruggedized design, a power option, and better security, making it simple to collect terabytes of data each day from a huge fleet of vehicles.
+Gather IoT data in extreme conditions: It sets up an edge computer and storage system built for places with little room, restricted bandwidth, and harsh weather, such as factories, mines, and oil fields.
+Improve patient outcomes: It provides patients with enhanced treatment while they are travelling or on the go, and it communicates vital data in real-time via built-in Wi-Fi and AWS DataSync. 
+Expedited content distribution: It gathers and analyses content, including high-resolution photos, and enhances team performance in a hectic, confined setting.
+AWS Snowball 
+Terabytes of data may be quickly transferred to the cloud using AWS Snowball, which has no storage or processing power restrictions. It expedites the transfer of data from offline or distant storage to the cloud. Furthermore, it handles computing tasks with minimal to no connectivity and accelerates application performance in remote, sterile edge locations. Snowball’s ruggedized chassis, integrated organization, and tamper-evident box safeguard your data while it is in transit and promptly deliver it to the intended location.
+
+AWS Snow Family: Snowball
+
+How does it work? 
+
+Choose your favourite device from either the snowball edge compute or the snowball edge storage optimization options.
+Utilize Amazon S3 to create a job (simple storage services).
+To track the device, choose SNS (Simple Notification Services).
+Set up a GPU and some other choices, such as Amazon EC2 AMIs.
+We got the device, which AWS ships for us, in 4-6 days.
+When you get there, turn it on and utilize AWS OpsHub to unlock it.
+Join the LAN to the snow gadget.
+Now launch the Ec2 instance, operate the device, and send data using AWS OpsHub.
+Following a complete device shutdown, go back to AWS.
+The E-lnk screen immediately displays the shipping label.
+Any data saved in the snowball is transferred when devices arrive in the AWS Region.
+AWS snowball architecture
+Use Cases 
+Migrate data at petabyte-scale: In particular, when network circumstances are constrained, it moves databases, backups, archives, healthcare records, analytics datasets, IoT sensor data, and media assets to the cloud.
+Process and analyze data locally: Run Amazon Machine Images (AMIs) on Amazon EC2 and distribute AWS Lambda code using machine learning (ML) or other applications on Snowball Edge devices.
+Optimize manufacturing data: It gathers and examines data from the factory itself to hone procedures and boost production, efficiency, and safety.
+AWS Snowmobile 
+Exabyte-scale data migration tools like AWS Snowmobile are used to transport enormous volumes of data to AWS. A semi-trailer truck towing the ruggedized 45-foot shipping container can move up to 100PB of data. Massive amounts of data, such as video libraries, image repositories, or even a full data centre migration, can be moved to the cloud with ease using snowmobiles. Snowmobile offers more secure, quick, and economical data transfer.
+
+AWS Snow Family: Snowmobile
+
+How does it Work? 
+A first evaluation will be followed by the delivery of a snowmobile to our data centre.
+It will be set up for us by AWS staff so that it can be used as a network storage target.
+AWS staff will work with our team to get in touch with us when a snowmobile is present.
+It communicates to our local network from the snowmobile using a transportable, high-speed network switch.
+We can now start transferring high-speed data to snowmobiles from a variety of sources inside our data centres.
+The Snowmobile is driven back to AWS after the data has been loaded, where it is then imported into Amazon S3.
+ Benefits of Snowmobile 
+Fast transfer even at a massive scale: Extremely big data transfers can take decades, even with a high-speed internet connection. However, with AWS Snowmobile, we are able to transmit 100 petabytes of data in a few weeks, plus the time required for the transport.
+Strong encryption: A 256-bit encryption key that KMS manages is used to encrypt the data. Before the information is written to the snowmobile, these keys are given. The encryption server on the snowmobile does not write encryption keys to the disk.
+Customize for our needs: AWS will work with you to make sure that all of your needs are taken into account before Snowmobile arrives on site because physical sites can have different migration requirements.
+Massively Scalable: Up to 100 petabytes of data can be transported by a Snowmobile in a single trip, which is around 1,250 AWS Snowball devices.
+Easy data retrieval: Many businesses worry that after moving all of their data to the cloud, it will be costly and time-consuming to get the data back if needed. All customers have access to Snowball and Snowmobile, which guarantee speedy data entry and exit into and from AWS.
+Rugged, durable, & more secure: Snowmobile is temperature-controlled, water-resistant, and impervious to tampering. Only AWS employees are authorized to operate the data container, and security access hardware measures restrict physical access. Snowmobiles are guarded by constant video surveillance, alarm monitoring, GPS tracking, and the option to have a security vehicle accompany them.
