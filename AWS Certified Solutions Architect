@@ -1089,3 +1089,4 @@ Active Directory Integration:
 -   User receives a SAML assertion
 -   User’s browser posts the SAML assertion to the AWS sign-in endpoint for SAML
 -   User’s browser receives the sign-in URL and is redirected to the console
+ 
