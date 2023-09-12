@@ -17,7 +17,7 @@ It comes with pre-built AMIs which is the major USP of Amazon along with a stron
 ## HOW EC2 WORKS
 Here AMI is a pre-configured bundle software. In short, an ISO format of Amazon.  We select an AMI and launch an instance from the AMI. Once instance is available, we can install any software as part of instance and make our own AMI.
 
-######### *Note*  that Amazon charges the user right from the pending state of instance to instance termination. There is also a special type of Amazon instance available called EDS. They provide you with an additional stage called stop instance which will decrease cost.
+#########*Note*  that Amazon charges the user right from the pending state of instance to instance termination. There is also a special type of Amazon instance available called EDS. They provide you with an additional stage called stop instance which will decrease cost.
 
 EC2 Instance Types & Size
 General Purpose (M1 &M3)- It is the  1st generation. The M1 & M3 have similar kind of instances. The only difference is that M3 will be new and it will provide better I/O. It will also cost less. For application hosting and web server usage, it would be recommended to go for M1 & M3.
