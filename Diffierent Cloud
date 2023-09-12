@@ -1,4 +1,4 @@
-#Public clouds:
+# Public clouds:
 ##Public clouds are cloud environments typically created from IT infrastructure not owned by the end user. Some of the largest public cloud providers include Alibaba Cloud, Amazon Web Services (AWS), Google Cloud, IBM Cloud, and Microsoft Azure.
 Traditional public clouds always ran off-premises, but today's public cloud providers have started offering cloud services on clients’ on-premise data centres. This has made location and ownership distinctions obsolete.
 All clouds become public clouds when the environments are partitioned and redistributed to multiple tenants. Fee structures aren't necessary characteristics of public clouds anymore, since some cloud providers (like the Massachusetts Open Cloud) allow tenants to use their clouds for free. The bare-metal IT infrastructure used by public cloud providers can also be abstracted and sold as IaaS.
@@ -7,7 +7,7 @@ When you use a public cloud, think of it as renting space on someone else’s se
 The key differentiator with a public cloud is that anyone can use it. All you have to do is sign up with a cloud service provider, and you will have access to the cloud. This means that your data uses the same resources as every other customer of that cloud provider. 
  
  
-#Private clouds:
+## Private clouds:
 Private clouds are loosely defined as cloud environments solely dedicated to a single end user or group, where the environment usually runs behind that user or group's firewall. All clouds become private clouds when the underlying IT infrastructure is dedicated to a single customer with completely isolated access.
 But private clouds no longer have to be sourced from on-premise IT infrastructure. Organisations are now building private clouds on rented, vendor-owned data centres located off-premises, which makes any location and ownership rules obsolete. This has also led to a number of private cloud subtypes, including:
 Managed private clouds
@@ -18,7 +18,7 @@ A private cloud, on the other hand, is reserved for a single organisation or bus
 You can create a private cloud using owned resources, such as a data centre, or you can also use a third-party provider. If you choose a third-party provider, specific hardware and software are dedicated solely to your organisation.
 Some organisations choose a private cloud over a public cloud for improved flexibility and security. With a private cloud, a business can customise the cloud to meet its specific needs. It also allows for more control when it comes to security because resources are not shared.loud. 
 
-#Hybrid clouds:
+## Hybrid clouds:
 A hybrid cloud is a seemingly single IT environment created from multiple environments connected through local area networks (LANs), wide area networks (WANs), virtual private networks (VPNs), and/or APIs.
 The characteristics of hybrid clouds are complex and the requirements can differ, depending on whom you ask. For example, a hybrid cloud may need to include:
 1.At least one private cloud and at least one public cloud
@@ -29,7 +29,7 @@ But every IT system becomes a hybrid cloud when apps can move in and out of mult
 A hybrid cloud is a combination of public clouds, private clouds, and on-premise infrastructure. A business using a hybrid cloud model often uses a public cloud for basic computing tasks, while storing more sensitive data on a private cloud or an on-site server. For many companies, a hybrid cloud model is the best of both worlds. 
 Businesses can maintain control over the entirety of their data while still leveraging the power and scalability of the cloud. 
   
-#Prefer to Multi-cloud:
+### *Prefer to Multi-cloud:*
 
  Multi Clouds are a cloud approach made up of more than 1 cloud service, from more than 1 cloud vendor—public or private. All hybrid clouds are multi clouds, but not all multi clouds are hybrid clouds. Multi Clouds become hybrid clouds when multiple clouds are connected by some form of integration or orchestration.
 A multi cloud environment might exist on purpose (to better control sensitive data or as redundant storage space for improved disaster recovery) or by accident (usually the result of shadow IT). Either way, having multiple clouds is becoming more common across enterprises that seek to improve security and performance through an expanded portfolio of environments.
